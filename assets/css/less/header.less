@@ -1,0 +1,40 @@
+// out: false
+@import "__pallete.less";
+
+.page__header {
+    padding-top: 30px;
+    background-color: @white;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__brand {
+            h1 {
+                font-size: 1rem;
+            }
+            h2 {
+                font-size: 0.9rem;
+                font-weight: 100;
+            }
+        }
+
+        menu {
+            i {
+                border-radius: 10px;
+                padding: 10px;
+                background-color: @indigo;
+                color: @white;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            &:hover {
+                i {
+                    background-color: @beaublue;
+                }
+            }
+        }
+    }
+}
