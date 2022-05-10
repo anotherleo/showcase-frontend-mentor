@@ -1,0 +1,6 @@
+.page__header h1 span {
+  display: block;
+}
+.page__header div[role="navigation"] {
+  color: blue;
+}
