@@ -3,12 +3,131 @@
 // * LEO'S FRONTENDMENTOR | Ch.1 Vers.1 | Order Summary Card
 
 .page__header {
-    h1 {
-        span {
-            display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    background-color: @black;
+    color: @white;
+
+    .header__wrapper {
+        align-items: center;
+
+        h1 {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+
+                color: @white;
+
+                transition: all 1s ease-out;
+
+                img {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 80px;
+                }
+
+                div {
+                    text-align: center;
+
+                    .header__title {
+                        display: block;
+                        margin-bottom: 10px;
+                        font: 900 20px @fontRH;
+                    }
+                    .header__subtitle {
+                        display: block;
+                        margin-bottom: 10px;
+                        font: 500 16px @fontRH;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        transform: rotate(360deg) scale(1.1);
+                        transition: all .7s ease-in;
+                    }
+
+                    div {
+                        filter: brightness(70%);
+                        transition: all .4s linear;
+                    }
+                }
+            }
+        }
+
+        details {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+            
+            summary {
+                text-align: center;
+                font: 700 16px @fontRH;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            p {
+                text-align: center;
+                font: 500 14px @fontRH;
+            }
+        }
+
+        div[role="navigation"] {
+            margin-top: 25px;
+
+            a {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 4px;
+
+                color: @white;
+                text-align: center;
+                
+            }    
         }
     }
-    div[role="navigation"] {
-        color: blue;
+
+    // ? RESPONSIVE 
+    @media screen and (min-width: 768px) {
+        .header__wrapper {
+            h1 {
+                a {
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    img {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    div {
+                        text-align: left;
+                    }
+                }
+            }
+            details {
+                summary,
+                p {
+                    text-align: left;
+                }
+            }
+            div[role="navigation"] {
+                margin-top: 0;
+                a {
+                    margin-left: 0;
+                    margin-right: 0;
+                    text-align: left;
+                }
+            }
+        }
     }
 }

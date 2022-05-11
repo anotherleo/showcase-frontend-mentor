@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#7280a7">
 
     <!-- SEO -->
-    <meta name="description" content="Web developer.">
+    <meta name="description" content="Solution for the challenge 'Order summary card' from FrontEndMentor.io, coded by Leo Thomas. Has improvised rulers and 4 new versions with new features.">
     <meta name="keywords" content="Leo Thomas Monteiro, @anotherleo, JavaScript, Responsive Web Design, FrontEndMentor, order summary">
     <meta name="author" content="Leo Thomas Monteiro">
 
@@ -21,37 +21,72 @@
 
     <!-- favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+    <!-- deffered scripts -->
+    <script defer src="https://kit.fontawesome.com/1a415b1d46.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="theme__light">
 
     <header class="page__header">
-        <h1>Leo's Front End Mentor Solution
-            <span>Challenge 1 - Order Summary Card Component, v.1</span>
-        </h1>
-        <div role="navigation" aria-label="Additional contents for the challenge">
-            <a href="#">Development Notes</a>
-            <a href="#"></a>
-            <a href="#">v.2 | New Colors</a>
-            <a href="#">v.3 | Modal</a>
-            <a href="#">v.4 | Theme Choice</a>
+        <div class="container">
+            <div class="row header__wrapper">
+                <div class="col-md-9">
+                    <h1>
+                        <a href="https://anotherleo.github.io" title="Leo Thomas Monteiro, Web Dev -- Portfolio">
+                            <img src="assets/img/header-otter.png" alt="lontra geométrica, ícone do website">
+                            <div>
+                                <span class="header__title">Leo's Front-End Mentor Solutions</span>
+                                <span class="header__subtitle">Challenge I - Order Summary Card Component</span>
+                            </div>
+                        </a>
+                    </h1>
+                    <details>
+                        <summary>Level 1 | The Challenge</summary>
+                        <p>This is the challenge as proposed on FrontendMentor.io, without new features or implementations. It was build with semantic and acessible HTML5, CSS3 boosted by Less preprocessor and Bootstrap 4.6 toolkit.</p>
+                    </details>
+                </div>
+                <div class="col-md-3">
+                    <div role="navigation" aria-label="Additional contents of the challenge">
+                        <a href="https://www.figma.com/file/qijrT35yYiMDDVjZ4RruOU/Ch1-%7C-Order-Summary-Card-%7C-Improvised-Rulers?node-id=0%3A1">
+                            <i class="fa-brands fa-figma"></i>&nbsp;Improvised Rulers
+                        </a>
+                        <a href="README.md">
+                            <i class="fa-regular fa-comments"></i>&nbsp;Developer Notes
+                        </a>
+                        <a href="#">LV.1 | The Challenge</a>
+                        <a href="#">LV.2 | Small Devices</a>
+                        <a href="#">LV.3 | Modal Feature</a>
+                        <a href="#">LV.4 | Theme Choice</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
         <article>
+            <img src="assets/img/illustration-hero.svg" alt="person happy with music in their headphones" class="summary__cover">
             <h2>Order Summary</h2>
             <p>
-                You can now listen to millions of songs, audiobooks, and podcasts on any
-                device anywhere you like!
+                You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
             </p>
             <menu>
-                <h3>Annual Plan</h3>
-                <span>$59.99/year</span>
+                <div>
+                    <img src="assets/img/icon-music.svg" alt="music icon" aria-hidden="true">
+                    <h3>
+                        Annual Plan
+                        <span>$59.99/year</span>
+                    </h3>
+                </div>
                 <button>Change</button>
             </menu>
-            <a href="#" title="Proceed to payment page">Proceed to Payment</a>
-            <a href="#" title="Cancel the current order">Cancel Order</a>
+            <a href="#" title="Proceed to payment page" class="button__payment">
+                Proceed to Payment
+            </a>
+            <a href="#" title="Cancel the current order" class="button__cancel">
+                Cancel Order
+            </a>
         </article>
     </main>
 

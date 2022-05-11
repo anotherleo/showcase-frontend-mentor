@@ -4,4 +4,96 @@
 
 @import "__pallete.less";
 
+article {
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 35px;
 
+    background-color: @white;
+    border-radius: 15px;
+    border: none;
+    width: fit-content;
+
+    .summary__cover {
+        margin-bottom: 36px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    h2,
+    p,
+    .button__payment {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    h2 {
+        margin-bottom: 23px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        font: 900 22px @fontRH;
+    }
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 27px;
+        max-width: 300px;
+
+        font: 500 16px/21px @fontRH;
+        text-align: center;
+        letter-spacing: -0.025em;
+    }
+
+    menu {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 23px;
+        padding: 16px 14px;
+
+        border-radius: 15px;
+        background-color: @verypaleblue;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 19px;
+
+            h3 {
+                font: 500 16px/21px @fontRH;
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .button__payment {
+        margin-bottom: 28px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button__cancel {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // ? RESPONSIVE 
+    @media screen and (min-width: 768px) {
+        max-width: 450px;
+        
+        p {
+            max-width: 390px;
+        }
+    }
+}
