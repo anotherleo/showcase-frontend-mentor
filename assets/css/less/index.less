@@ -3,17 +3,29 @@
 @import "__pallete.less";
 
 .page__banner {
-    background-color: @white;
-
-    .container {
-        padding-top: 60px;
-        padding-bottom: 60px;
-
-        text-align: center;
+    .banner__title {
+        h1 {
+            text-align: center;
+            font: 400 60px @fontB;
+            span {
+                display: block;
+                font: 200 26px @fontR;
+            }
+        }
     }
 
     @media screen and (min-width: 768px) {
         padding-top: 120px;
         padding-bottom: 120px;
+    }
+}
+
+.page__projects {
+    .projects__filters {
+        display: flex;
+        div[role=button] {
+            padding: 15px;
+            border: 1px solid black;
+        }
     }
 }

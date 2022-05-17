@@ -1,125 +1,43 @@
 @font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjRXME.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_GbQXME.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Josefin Sans';
+  font-family: 'Bebas Neue';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQXME.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/bebasneue/v9/JTUSjIg69CK48gW7PXooxW4.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: 'Raleway';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_ArQXME.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvao4CP.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: 'Raleway';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 200;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_ObXXME.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCP.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Josefin Sans';
+  font-family: 'Raleway';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/josefinsans/v24/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_N_XXME.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVuEooCP.ttf) format('truetype');
 }
-body {
-  font-family: 'Josefin Sans', sans-serif;
-  color: hsl(240, 5%, 8%);
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v27/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaooCP.ttf) format('truetype');
 }
 a:hover {
   text-decoration: none;
 }
-main {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: hsl(209, 56%, 84%);
-}
-main .project__card {
-  display: inline-block;
-  margin-bottom: 30px;
-  background-color: hsl(206, 100%, 99%);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-}
-main .project__card header {
-  border: 0;
-  border-radius: 10px 10px 0 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: center;
-  background-color: hsl(209, 100%, 23%);
-  color: hsl(206, 100%, 99%);
-}
-main .project__card header .project__tag {
-  display: block;
-  margin-bottom: 15px;
-  font-weight: 300;
-  font-size: 0.7em;
-  text-transform: uppercase;
-}
-main .project__card header .project__version {
-  display: block;
-  font-weight: 300;
-  font-size: 0.6em;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 25px;
-}
-main .project__card .project__description {
-  padding: 15px;
-  text-align: center;
-}
-main .project__card .project__description p {
-  font-weight: 300;
-}
-main .project__card .project__description .project__links {
-  display: flex;
-  justify-content: space-evenly;
-}
-main .project__card:hover {
-  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.16);
-}
-@media screen and (min-width: 768px) {
-  main .project__card {
-    flex-direction: row;
-  }
-  main .project__card header {
-    border-radius: 10px 0 0 10px;
-    padding: 30px;
-    text-align: left;
-  }
-  main .project__card .project__description {
-    padding: 30px;
-    text-align: left;
-  }
-}
-@media screen and (min-width: 992px) {
-  main .project__card header {
-    min-width: 325px;
-  }
-}
 .page__header {
   padding-top: 30px;
-  background-color: hsl(206, 100%, 99%);
 }
 .page__header .container {
   display: flex;
@@ -136,25 +54,31 @@ main .project__card:hover {
 .page__header .container menu i {
   border-radius: 10px;
   padding: 10px;
-  background-color: hsl(209, 100%, 23%);
-  color: hsl(206, 100%, 99%);
+  color: black;
   font-size: 20px;
   cursor: pointer;
 }
 .page__header .container menu:hover i {
-  background-color: hsl(209, 56%, 84%);
+  background-color: white;
 }
-.page__banner {
-  background-color: hsl(206, 100%, 99%);
-}
-.page__banner .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.page__banner .banner__title h1 {
   text-align: center;
+  font: 400 60px 'Bebas Neue', sans-serif;
+}
+.page__banner .banner__title h1 span {
+  display: block;
+  font: 200 26px 'Raleway', sans-serif;
 }
 @media screen and (min-width: 768px) {
   .page__banner {
     padding-top: 120px;
     padding-bottom: 120px;
   }
+}
+.page__projects .projects__filters {
+  display: flex;
+}
+.page__projects .projects__filters div[role=button] {
+  padding: 15px;
+  border: 1px solid black;
 }
