@@ -21,7 +21,7 @@
     <section class="page__banner">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-lg-6 col-xl-5">
+                <div class="title__shell col-md-12 col-lg-6 col-xl-5">
                     <div class="banner__title">
                         <h1 class="animate__animated animate__pulse">
                             SOLUÇÕES FRONTENDMENTOR
@@ -30,10 +30,22 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-6 col-xl-7">
-                    <div class="banner__carousel">
-                        <a href="#">
-                            <img src="assets/img/Desafio 1.png" alt="desafio 1">
-                        </a>
+                    <div class="owl-carousel owl-theme banner__carousel">
+                        <div class="item">
+                            <a href="#">
+                                <img src="assets/img/Desafio 1.png" alt="desafio 1">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img src="assets/img/Desafio 1.png" alt="desafio 1">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img src="assets/img/Desafio 1.png" alt="desafio 1">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,41 +56,74 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <menu id="projects__filters" class="projects__filters">
-                        <div role="button" class="" data-filter="*">
-                            Ver todos
-                        </div>
-                        <div role="button" data-filter=".filter--lp">Landing Page</div>
-                        <div role="button" data-filter=".filter--comp">Componente</div>
-                        <div role="button" data-filter=".filter--solved">Solucionado</div>
+                    <menu id="projects__filters" class="projects__filters filters-button-group">
+                        <button class="button is-checked" data-filter="*">
+                            Todos
+                        </button>
+                        <button class="button" data-filter=".filter--lp">Landing Page</button>
+                        <button class="button" data-filter=".filter--comp">Componente</button>
+                        <button class="button" data-filter=".filter--solved">Solucionado</button>
                     </menu>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <div class="projects__grid"></div>
+                <div class="col-md-12">
+                    <div class="grid row">
+                        <div class="filter--item filter--comp filter--solved col-lg-3">
+                            <article data-bs-toggle="modal" data-bs-target="#challenge1">
+                                <div class="title">
+                                    <img src="assets/img/desafio-1.svg" alt="" class="img-fluid">
+                                    <span class="challenge">
+                                        <span class="number">DESAFIO Nº1</span>
+                                        <span class="rank">RANK NEWBIE</span>
+                                    </span>
+                                    <span class="name">COMPONENTE DE RESUMO DE COMPRA</span>
+                                </div>
+                            </article>
+                            <div class="modal fade" id="challenge1" tabindex="-1" aria-labelledby="challenge1Name" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <p class="modal-title" id="challenge1Name">
+                                                <span>DESAFIO Nº1</span>
+                                                COMPONENTE DE RESUMO DE COMPRAS
+                                            </p>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Faça o desafio original! Visite a <a href="#https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj">página deste desafio no FrontEndMentor</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>                              
+                        </div>
+                        <div class="filter--item filter--lp col-lg-3">
+                            <article>LANDING PAGE Nº1</article>
+                        </div>
+                        <div class="filter--item filter--comp col-lg-3">
+                            <article>COMP Nº2</article>
+                        </div>
+                        <div class="filter--item filter--comp col-lg-3">
+                            <article>COMP Nº3</article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        var $grid = $('.grid').isotope({
-            itemSelector: '.element-item',
-            layoutMode: 'fitRows',
-        })
-    </script>
-
-    <!-- bootstrap 4.6.1 -->
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+    <!-- bootstrap 5.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     <!-- owl carousel controls -->
-    <script src="assets/libs/owl.carousel.min.js"></script>
+    <script src="assets/libs/owl/owl.carousel.min.js"></script>
     <script>
-        $('.about__carousel').owlCarousel({
+        $('.banner__carousel').owlCarousel({
             loop: true,
-            nav: false,
+            nav: true,
             dots: true,
             autoplay: true,
             autoplayTimeout: 3000,
@@ -98,6 +143,26 @@
 
     <!-- isotope controls -->
     <script src="assets/libs/isotope/isotope.pkgd.min.js"></script>
+    <script>
+        // init Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.filter--item',
+            layoutMode: 'fitRows'
+        });
 
+        // bind filter button click
+        $('.filters-button-group').on( 'click', 'button', function() {
+            var filterValue = $( this ).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+        // change is-checked class on buttons
+        $('.filters-button-group').each( function( i, buttonGroup ) {
+            var $buttonGroup = $( buttonGroup );
+            $buttonGroup.on( 'click', 'button', function() {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $( this ).addClass('is-checked');
+            });
+        });
+    </script>
 </body>
 </html>
